@@ -1,23 +1,17 @@
 # Handle line endings automatically for files detected as text
 * text=auto
-
 # Model files
 *.safetensors filter=lfs diff=lfs merge=lfs -text
 model.safetensors.index.json filter=lfs diff=lfs merge=lfs -text
 *.bin filter=lfs diff=lfs merge=lfs -text
-
 # JSON files should be treated as text
 *.json text
-
 # Markdown files should be treated as text
 *.md text
-
 # Python files should use LF
 *.py text eol=lf
-
 # Force batch scripts to always use CRLF line endings
 *.{cmd,[cC][mM][dD]} text eol=crlf
 *.{bat,[bB][aA][tT]} text eol=crlf
-
 # Force bash scripts to always use LF line endings
 *.sh text eol=lf 
